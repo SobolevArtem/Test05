@@ -5,7 +5,7 @@
 <modelVersion>4.0.0</modelVersion>
 
 <groupId>org.example</groupId>
-<artifactId>Test05</artifactId>
+<artifactId>Test06</artifactId>
 <version>1.0.1-SNAPSHOT</version>
 
 <properties>
@@ -32,6 +32,26 @@
             <configuration>
                 <failIfNoTests>true</failIfNoTests>
             </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.5</version>
+            <executions>
+                <execution>
+                    <id>prepare-agent</id>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>report</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+            </executions>
         </plugin>
     </plugins>
 </build>
